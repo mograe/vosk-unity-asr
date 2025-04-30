@@ -173,6 +173,8 @@ public class VoiceProcessor : MonoBehaviour
         {
             CurrentDeviceIndex = deviceIndex;
         }
+
+        Debug.Log(CurrentDeviceName);
     }
 
     /// <summary>

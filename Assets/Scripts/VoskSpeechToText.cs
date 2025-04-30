@@ -32,6 +32,8 @@ public class VoskSpeechToText : MonoBehaviour
 	[Tooltip("The phrases that will be detected. If left empty, all words will be detected.")]
 	public List<string> KeyPhrases = new List<string>();
 
+	public bool TurnOnKeyPhrases = false;
+
 	//Cached version of the Vosk Model.
 	private Model _model;
 
@@ -155,7 +157,7 @@ public class VoskSpeechToText : MonoBehaviour
 	//Translates the KeyPhraseses into a json array and appends the `[unk]` keyword at the end to tell vosk to filter other phrases.
 	private void UpdateGrammar()
 	{
-		if (KeyPhrases.Count == 0)
+		if (KeyPhrases.Count == 0 || !TurnOnKeyPhrases)
 		{
 			_grammar = "";
 			return;

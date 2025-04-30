@@ -70,7 +70,8 @@ public class VoskDialogText : MonoBehaviour
 
 	void Say(string response)
 	{
-		System.Diagnostics.Process.Start("/usr/bin/say", response); 
+		//Функция для TTS
+		//System.Diagnostics.Process.Start("/usr/bin/say", response); 
 	}
 
 	void AddFinalResponse(string response) {
